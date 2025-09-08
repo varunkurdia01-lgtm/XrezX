@@ -19,6 +19,9 @@ jobs:
           distribution: temurin
           java-version: 17
 
+      - name: Set up Gradle
+        uses: gradle/gradle-build-action@v2
+
       - name: Build with Gradle
         run: gradle assembleDebug
 
@@ -26,4 +29,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: XrezX-APK
-          path: app/build/outputs/apk/debug/app-debug.apk￼Enter
+          path: app/build/outputs/apk/debug/app-debug.apk
